@@ -1,0 +1,21 @@
+{
+  "version": "0.15",
+  "groups": [
+    {
+      "name": "Replace images",
+      "urls": [
+        "*"
+      ],
+      "substitutions": [
+        {
+          "input": "(?!src=\")(http://.*\\.(gif|jpe?g|png))",
+          "inputType": "regexp",
+          "output": "$1<br/><img src=\"$1\"/>",
+          "caseSensitive": false
+        }
+      ],
+      "html": "output",
+      "enabled": true
+    }
+  ]
+}
